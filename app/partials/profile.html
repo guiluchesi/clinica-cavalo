@@ -1,0 +1,57 @@
+<div class="column row">
+  <div class="medium-7 columns">
+    <div ng-if="messages.error" role="alert" class="callout alert">
+      <div ng-repeat="error in messages.error">{{error.msg}}</div>
+    </div>
+    <div ng-if="messages.success" role="alert" class="callout success">
+      <div ng-repeat="success in messages.success">{{success.msg}}</div>
+    </div>
+
+    <h5>Informação do Perfil</h5>
+
+    <form ng-submit="updateProfile()">
+      <label for="email">E-mail</label>
+      <input type="email" name="email" id="email" ng-model="profile.email">
+
+      <label for="name">Nome</label>
+      <input type="text" name="name" id="name" ng-model="profile.name">
+
+      <label>Genêro</label>
+      <input type="radio" name="gender" id="male" value="male" ng-checked="profile.gender === 'male'">
+      <label for="male">Homem</label>
+      <input type="radio" name="gender" id="female" value="female" ng-checked="profile.gender === 'female'">
+      <label for="female">Mulher</label>
+
+      <label for="location">Localização</label>
+      <input type="text" name="location" id="location" ng-model="profile.location">
+
+      <label for="website">Site</label>
+      <input type="text" name="website" id="website" ng-model="profile.website">
+
+      <label>Gravatar</label>
+      <img ng-src="{{profile.gravatar}}" class="gravatar" width="100" height="100">
+
+      <button type="submit" class="success button">Atualizar Perfil</button>
+    </form>
+
+    <h5>Alterar Senha</h5>
+
+    <form ng-submit="changePassword()">
+      <label for="password">Nova Senha</label>
+      <input type="password" name="password" id="password" ng-model="profile.password">
+
+      <label for="confirm">Confirmar Senha</label>
+      <input type="password" name="confirm" id="confirm" ng-model="profile.confirm">
+
+      <button type="submit" class="success button">Alterar Senha</button>
+    </form>
+
+    <h5>Contas Conectadas</h5>
+    <h5>Deletar Conta</h5>
+
+    <form ng-submit="deleteAccount()">
+      <p>Você pode deletar sua conta, mas tenha em mente que essa ação é irreversível.</p>
+      <button type="submit" class="alert button">Deletar Conta</button>
+    </form>
+  </div>
+</div>

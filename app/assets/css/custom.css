@@ -1,0 +1,11 @@
+@import 'modules/header.css';
+
+:root {
+  --mainColorDark: #003957;
+  --mainColorLight: #a8c941;
+}
+
+.logo-inicial {
+  text-align: center;
+  margin-top: 10rem;
+}

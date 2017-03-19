@@ -1,0 +1,33 @@
+<div class="column row">
+  <div class="row">
+    <div class="medium-8 medium-offset-2 columns">
+      <div ng-if="messages.error" role="alert" class="callout alert">
+        <div ng-repeat="error in messages.error">{{error.msg}}</div>
+      </div>
+
+      <form ng-submit="signup()">
+        <h4>Criar uma Conta</h4>
+
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="E-mail" ng-model="user.email" autofocus>
+
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name" placeholder="Nome" ng-model="user.name">
+
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password" placeholder="Senha" ng-model="user.password">
+
+        <p class="help-text">Ao se cadastrar, você está concordando com os <a href="/">Termos de Serviços</a>.</p>
+
+        <button type="submit" class="button">Criar uma conta</button>
+      </form>
+
+      <div class="hr-title"><span>ou</span></div>
+
+      <div class="button-group">
+      </div>
+
+      <p>Já tem uma conta? <a href="/login">Entrar</a></p>
+    </div>
+  </div>
+</div>

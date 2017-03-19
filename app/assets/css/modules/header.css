@@ -1,0 +1,18 @@
+.main-logo {
+  background-image: url('../img/clinica.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  font-size: 0;
+  width: 55px;
+  height: 45px;
+  margin-top: 5px;
+  margin-left: 20px;
+  box-sizing: border-box;
+}
+
+.top-bar .menu > li > a {
+  background-color: var(--mainColorDark);
+  &.active {
+    background-color: var(--mainColorLight);
+  }
+}
